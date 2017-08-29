@@ -1,0 +1,330 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 12px;
+    font-family: "微软雅黑";
+    background: #000;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+    display: block;
+}
+
+.clearFixed:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background: rgba(6, 217, 149, 1);
+    position: relative;
+}
+
+.titleA {
+    font-size: 30px;
+    font-family: arial;
+    line-height: 50px;
+    color: #fff;
+    padding: 15px;
+}
+
+.btn_search {
+    position: absolute;
+    top: 9px;
+    right: 202px;
+    background: #C82A2A;
+    outline: none;
+    display: block;
+    height: 34px;
+    border-radius: 34px;
+    border: none;
+    width: 65px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#search {
+    padding: 0 70px 0 15px;
+    outline: none;
+    border: 2px solid #fff;
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+    display: block;
+    width: 100px;
+    height: 34px;
+    position: absolute;
+    top: 7px;
+    right: 200px;
+    background: transparent;
+    border-radius: 30px;
+}
+
+#tou {
+    width: 120px;
+    height: 50px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+#tou li {
+    width: 40px;
+    height: 40px;
+    display: block;
+    float: left;
+    line-height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    position: relative;
+}
+
+header img {
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
+
+.iconz {
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    line-height: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 900;
+    border: 2px solid #fff;
+    background: red;
+    border-radius: 50%;
+}
+
+#con {
+    float: left;
+    width: 250px;
+    background: #000;
+    padding-top: 20px;
+    position: absolute;
+    top: 50px;
+    bottom: 0
+}
+
+#con1 {
+    width: 250px;
+    background: #fff;
+}
+
+#list {
+    display: block;
+    width: 250px;
+    background: #000;
+}
+
+#list li {
+    display: block;
+    width: 250px;
+    height: 40px;
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.lis a {
+    display: block;
+    padding: 10px 15px;
+    width: 220px;
+    height: 20px;
+    font-size: 16px;
+}
+.lis i{
+    margin-right: 20px;
+}
+.iconfont {
+    margin-right: 6px;
+    color: #fff;
+    font-weight: 900;
+}
+
+.Alist {
+    color: #CCCCCC;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.other {
+    margin-left: 120px;
+}
+
+#content {
+    position: absolute;
+    left: 250px;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    float: left;
+    background: #f2f4f8;
+}
+
+.tubiao1 {
+    /* height: 100px; */
+    /* display: flex;
+    justify-content: space-between; */
+    position: absolute;
+    left: 23px;
+    top: 15px;
+    right: 0;
+}
+
+.tubiao1_1 {
+    width: 250px;
+    height: 100px;
+    background: #fff;
+    box-shadow: 0 0 5px #ccc;
+    float: left;
+    margin-right: 23px;
+    margin-bottom: 15px;
+}
+
+.tubiao1_1_1 {
+    padding: 15px;
+    width: 220px;
+    height: 70px;
+}
+
+.tubiao1_1_1 .iconfont {
+    font-size: 66px;
+    float: left;
+}
+
+.show_tubiao1 {
+    width: 133px;
+    height: 72px;
+    float: left;
+    margin-left: 10px;
+}
+
+h5 {
+    font-size: 20px;
+    line-height: 22px;
+    margin: 10px 0 5px 0;
+    color: #000000;
+}
+
+.show_tubiao1 span {
+    font-size: 15px;
+    color: #CCCCCC;
+}
+
+.tubiao2 {
+    width: ;
+    height: 413px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tubiao2_1 {
+    background: sandybrown;
+    width: 340px;
+    box-shadow: 0 0 5px #ccc;
+    text-align: center;
+    line-height: 50px;
+    font-size: 50px;
+}
+
+.tubiao3 {
+    width: ;
+    height: 400px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tubiao3_1 {
+    width: 518px;
+    box-shadow: 0 0 5px #ccc;
+    text-align: center;
+    line-height: 50px;
+    font-size: 50px;
+}
+
+#rili {
+    padding: 21px;
+    width: 340px;
+    box-shadow: 0 0 5px #ccc;
+    margin-left: 10px;
+    height: 413px;
+}
+
+#shuju1 {
+    width: 340px;
+    box-shadow: 0 0 5px #ccc;
+    margin-left: 10px;
+}
+
+#shuju2 {
+    width: 340px;
+    box-shadow: 0 0 5px #ccc;
+    margin-left: 10px;
+}
+
+.tubiao4 {
+    height: 585px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tubiao5 {
+    height: 67px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tubiao5 span {
+    width: 1079px;
+    display: block;
+    height: 67px;
+    font-size: 14px;
+    line-height: 67px;
+    text-align: center;
+}
+
+#shuju4_1 {}
