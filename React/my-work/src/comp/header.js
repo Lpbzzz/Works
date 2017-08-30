@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+ 
+import { Avatar } from 'antd';
 class HeadModel extends Component{
     constructor(){
         super();
@@ -6,25 +8,12 @@ class HeadModel extends Component{
     render(){
         return (
             <header>
-                <div className="title"><a href="index2.html" className="titleA">Home</a></div>
+                <div className="title"><a href="/" className="titleA">后台系统</a></div>
                 <input type="text" id="search" />
                 <button className="btn_search">Search</button>
                 <ul id="tou">
                     <li>
-                        <a href="javascript:">
-                            <i>
-                                <img src={require('./imgs/mess.png')} />
-                            </i>
-                        </a>
-                        <span className="iconz">5</span>
-                    </li>
-                    <li>
-                        <a href="javascript:">
-                            <i>
-                                <img src={require('./imgs/touxiang.png')} />
-                            </i>
-                        </a>
-                        <span className="iconz">5</span>
+                        <Avatar shape="square" size="large" icon="user" />
                     </li>
                 </ul>
             </header>
