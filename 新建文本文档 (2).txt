@@ -1,0 +1,55 @@
+<img   src="目标文件路径及全称"     alt="图片替换文本"     title="图片标题" />
+	title的作用: 在你鼠标悬停在该图片上时显示一个小提示，鼠标离开就没有了，
+	HTML的绝大多数标签都支持title属性，title属性就是专门做提示信息的.
+	alt的作用: alt属性是在你的图片因为某种原因不能加载时在页面显示的提示信息，
+	它会直接输出在原本加载图片的地方
+外部样式的建立及调用*方法一<link rel="stylesheet" type="text/css" href="目标文件的
+	路径及文件名全称" />说明：使用link元素导入外部样式表时，需将该元素写在文档头部，
+	即<head>与</head>之间。
+建议：颜色 图片 是否平铺 图片位置  是否滚动
+	语法：选择符{background：属性值1   属性值2   属性值3  属性值4;}
+文本大小 font-size:14px/16px/18px;
+文本颜色语法：{color:颜色值;}
+文本字体font-family:"字体1","字体2";
+文本加粗 font-weight:normal/bold/bolder/100-900
+文本倾斜font-style:normal常规字体/italic/oblique倾斜;
+水平对齐语法：{text-align:left/right/center/justify（两端对齐中文不起作用）};
+首行缩进语法：{text-indent:value;}说明：
+行高语法：	行高{line-height:normal/数值;}
+行高测量 	1）确认字体大小2）从一行文字的最顶端量到第二行文字的最顶端3）
+	得出的值即为行高
+	文字简写文字属性简写  font:font-style   font-weight   font-size/line-height   font-family;
+	font符合样式是有顺序的，font-style、font-weight的顺序是可以互相调换
+	文字属性简写：font:12px/1.5em  "宋体";
+文本修饰text-decoration:none/underline/overline/line-through/blink.(高版本浏览器不支持blink属性)
+	说明：none:没有修饰underline:添加下划线overline:添加上划线line-through:添加删除线blink：闪烁
+锚点链接定义：是网页制作中超级链接的一种，又叫命名锚记。
+	命名锚记像一个迅速定位器一样是一种页面内的超级链接，运用相当普遍。
+	名锚点链接的应用：1)命名锚点的作用：在同一页面内的不同位置进行跳转。
+	2)给元素定义命名锚记名语法：<标记   id="命名锚记名">    </标记>
+	3)命名锚记连接语法：<a href="#命名锚记名称"></a>
+字母间距：	letter-spacing:数值
+单词间距：	word-spacing:数值
+强制不换行：	white-space:normal(正常)/nowrap(不换行)
+空格大小demo1:	字体大小:16px;	空格大小：8px;	
+	demo2:	字体大小:14px;	空格大小:7px;
+	空格的大小是当前字体大小的一半代码换行被解析成空格
+padding 内填充 padding 填充：padding,在设定页面中一个元素内容到元素的边缘(边框) 之间的距离。 也称补白。
+用法：      1）用来调整内容在容器中的位置关系
+	2）用来调整子元素在父元素中的位置关系。注：padding属性需要添加在父元素上。
+	3）padding值是额外加在元素原有大小之上的，如想保证元素大小不变，需从元素宽或高上减掉后添加的padding属性值。
+属性值的4种方式：  四个值：上   右   下   左 {padding:10px   20px   30px    40px;}  
+		三个值：上    左右    下 {padding:10px   20px   30px ;}  
+		二个值：上下    左右 {padding:10px   20px  ;}  
+		一个值：四个方向 padding:2px;/*定义元素四周填充为2px*/
+		padding-left:左边界  padding-right:右边界   padding-top:上边界    padding-bottom:下边界
+边界：margin,在元素外边的空白区域，被称为边距。
+		margin-left:左边界  margin-right:右边界   margin-top:上边界margin-bottom:下边界  
+属性值的4种方式：  四个值：上   右   下   左 {margin:10px   20px   30px    40px;}  
+		三个值：上    左右    下 {margin:10px   20px   30px ;}  
+		二个值：上下    左右 {margin:10px   20px  ;} 
+	 	一个值：四个方向 margin:2px;
+1.margin-top传递当父级元素包裹子元素时，子元素有margin-top或者margin-bottom,那么第一个子元素的margin-top或者margin-bottom，会传递给父级元素
+2.margin叠压当父级容器包裹多个子元素时，子元素的margin-top,margin-bottom会叠压当上下margin值不一样时，叠压范围取最大值				
+解决：      1.给父级容器加border
+	2.尽量不要使用同级方向的margin可以单独给某一个元素设置单一方向的margin，用padding代替 *margin值的解析：左右边界累加，上下边界重合。
