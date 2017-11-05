@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 9999px;
+        }
+
+        .div1 {
+            background: red;
+            width: 200px;
+            height: 200px;
+            position: fixed;
+            left: 400px;
+            top: 200px;
+        }
+
+        .div2 {
+            background: orange;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            left: 200px;
+            top: 200px;
+        }
+
+        .div3 {
+            background: yellow;
+            width: 200px;
+            height: 200px;
+        }
+
+        .div4 {
+            background: blue;
+            width: 200px;
+            height: 200px;
+        }
+
+        .div1-1 {
+            background: rgb(57, 37, 170);
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+
+        .div1-2 {
+            background: rgb(170, 37, 148);
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+
+        .div2-1 {
+            background: rgb(0, 68, 255);
+            width: 100px;
+            height: 100px;
+        }
+
+        .div3-1 {
+            background: rgb(255, 72, 0);
+            width: 100px;
+            height: 100px;
+        }
+
+        .div4-1 {
+            background: rgb(255, 0, 43);
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- position详细 -->
+    <!-- absolute 绝对定位，相对于static以外的第一个父级元素定位-->
+    <!-- fixed生成绝对定位元素，相对于窗口定位 -->
+    <!-- relative生成相对定位元素，相对于正常位置定位 -->
+    <!-- static默认值，无定位，忽略left z-index等 -->
+    <!-- inherit继承父级元素的定位 -->
+
+
+    <!-- 
+
+
+
+    
+ -->
+
+    <div class="div1">
+        <div class="div1-1">
+            <div class="div1-2"></div>
+        </div>
+    </div>
+    <div class="div2">relative
+        <div class="div2-1"></div>
+    </div>
+    <div class="div3">
+        <div class="div3-1"></div>
+    </div>
+    <div class="div4">
+        <div class="div4-1"></div>
+    </div>
+</body>
+
+</html>
