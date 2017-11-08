@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="data/jquery-3.2.1.js"></script>
+		<script type="text/javascript">
+			/*
+				异步：操作之间没啥关系，同时进行多个操作
+				同步：同时只能做一件事
+				
+				异步：代码复杂
+				同步：代码简单
+				
+				Promise：消除异步操作
+					本质上依然是异步，不过是巧妙的封装了
+					用同步一样的方式，来书写异步代码
+					
+				当你使用Promise的时候需要new一个出来
+				
+				Promise接收一个参数，是一个函数，里面书写异步的代码
+				
+				函数里接收两个参数，一个是resolve（成功），一个是reject（失败）
+			*/
+			let p = new Promise(function(resolve,reject){
+				//异步的代码
+				//resolve成功了
+				//reject失败了
+				$.ajax({
+					url:'data/arr.txt',
+					dataType:'json',
+					success(arr){
+						//成功调用resolve
+						resolve(arr)
+					},
+					error(err){
+						//失败调用reject
+						reject(err)
+					}
+				});
+			})
+			
+			//当Promise执行有结果，就会调用then()
+			
+			//then()里面接收两个函数作为参数
+			//第一个参数就是resolve
+			//第二个参数就是reject
+			
+			p.then(function(arr){
+				//console.log(arr)
+				console.log('成功了'+arr)
+			},function(err){
+				//console.log(err)
+				console.log('失败了'+err)
+			})
+		</script>
+	</body>
+</html>

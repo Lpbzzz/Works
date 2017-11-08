@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="data/jquery-3.2.1.js"></script>
+		<script type="text/javascript">
+			/*
+				Promise.all()
+					一个一个请求全都得成功，是一个与的关系
+				
+				Promise.race() 竞速 (很少用)
+					同时读取资源，那个资源先来就先用谁
+			*/
+			Promise.all([
+				$.ajax({url:'data/arr.txt',dataType:'json'}),
+				$.ajax({url:'data/json.txt',dataType:'json'})
+			]).then(result=>{
+				console.log(result)
+				let [res1,res2] = result;
+				console.log(res1,res2)
+				console.log('全都成功了')
+			},error=>{
+				console.log(err)
+				console.log('至少有一个失败了')
+			})
+		</script>
+	</body>
+</html>

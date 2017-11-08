@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="data/jquery-3.2.1.js"></script>
+		<script type="text/javascript">
+			/*
+				高版本的jQuery本身自带Promise支持
+				ajax的返回值就是一个Promise对象
+			*/
+			let p = $.ajax({
+				url:'data/arr.txt',
+				dataType:'json'
+			});
+			console.log(p)
+			
+			/*有了Promise之后的异步
+				Promise.all([
+					$.ajax(),
+					$.ajax()
+				]).then(result=>{
+					console.log('全都成功了')
+				},error=>{
+					console.log('至少有一个失败了')
+				})
+			*/
+			
+			/*Promise.all([
+				$.ajax({url:'data/arr.txt',dataType:'json'}),
+				$.ajax({url:'data/json.txt',dataType:'json'})
+			]).then(function(result){
+				console.log(result)
+				let [res1,res2] = result;
+				console.log(res1,res2)
+				console.log('全都成功了')
+			},function(error){
+				console.log(error)
+				console.log('至少有一个失败了')
+			})*/
+			
+			Promise.all([
+				$.ajax({url:'data/arr.txt',dataType:'json'}),
+				$.ajax({url:'data/json.txt',dataType:'json'})
+			]).then(result=>{
+				console.log(result)
+				let [res1,res2] = result;
+				console.log(res1,res2)
+				console.log('全都成功了')
+			},error=>{
+				console.log(err)
+				console.log('至少有一个失败了')
+			})
+			
+		</script>
+	</body>
+</html>

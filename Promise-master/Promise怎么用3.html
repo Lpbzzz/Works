@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="data/jquery-3.2.1.js"></script>
+		<script type="text/javascript">
+			
+			function createPromise(url){
+				return new Promise(function(resolve,reject){
+					//异步的代码
+					//resolve成功了
+					//reject失败了
+					$.ajax({
+						//url:url,名字和值一样，保留一个
+						url,
+						dataType:'json',
+						success(arr){
+							//成功调用resolve
+							resolve(arr)
+						},
+						error(err){
+							//失败调用reject
+							reject(err)
+						}
+					});
+				})
+			}
+
+			//当Promise执行有结果，就会调用then()
+			
+			//then()里面接收两个函数作为参数
+			//第一个参数就是resolve
+			//第二个参数就是reject
+			
+			//Promise.all(),全都执行完了以后
+			//Promise.all()里面接收一个数组作为参数
+			
+			Promise.all([
+				createPromise('data/arr.txt'),
+				createPromise('data/json.txt')
+			]).then(function(arr){
+				console.log(arr)
+				let [res1,res2] = arr;
+				console.log(res1,res2)
+				console.log('全都成功了')
+			},function(err){
+				console.log(err)
+				console.log('至少有一个失败了')
+			})
+		</script>
+	</body>
+</html>
