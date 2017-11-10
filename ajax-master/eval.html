@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" name="txt" id="txt" value="" />
+<script type="text/javascript">
+	
+	/*
+		eval:
+			让字符串能够执行js代码
+			
+			
+		1.jQuery插件支持的转换方式：
+
+			$.parseJSON( jsonstr );
+				jQuery.parseJSON(jsonstr),可以将json字符串转换成json对象
+
+		2.浏览器支持的转换方式(Firefox，chrome，opera，safari，ie9，ie8)等浏览器：
+
+			JSON.parse(jsonstr); //可以将json字符串转换成json对象 
+			JSON.stringify(jsonobj); //可以将json对象转换成json对符串 
+
+			注：ie8(兼容模式),ie7和ie6没有JSON对象，推荐采用JSON官方的方式，引入json.js。
+
+		3.Javascript支持的转换方式：
+
+			eval('(' + jsonstr + ')'); 
+			//可以将json字符串转换成json对象,注意需要在json字符外包裹一对小括号
+			注：ie8(兼容模式),ie7和ie6也可以使用eval()将字符串转为JSON对象，
+			但不推荐这些方式，这种方式不安全eval会执行json串中的表达式。
+			
+			注：JSON.parse()与eval()的区别
+
+    			JSON.parse()之可以解析json格式的数据，
+				并且会对要解析的字符串进行格式检查，
+				如果格式不正确则不进行解析，
+				而eval()则可以解析任何字符串，eval是不安全的。
+				
+		4.new function 的方法
+		
+	*/
+	
+//	var str = 'alert(123)';
+
+//	var arr = "[1,2,3,4]";
+
+//	var obj = "({'name':123})";
+
+	var obj = "{'name':123}";
+	
+	//new Function('a,b','return alert(a+b)')(1,2);
+	
+	var data = new Function('','return'+obj)();
+	
+	console.log(data);
+	
+	
+//	console.log(eval('('+ obj + ')'));
+	
+	
+//	console.log(obj.name)
+	
+//	console.log(eval(obj));
+	
+//	(function(){
+//		alert(123);
+//	})()
+	
+	
+	/*
+		new Function() 
+	*/
+	
+	txt.onblur = function(){
+		
+		//eval(this.value);
+		
+	}
+	
+
+</script>
+</body>
+</html>
